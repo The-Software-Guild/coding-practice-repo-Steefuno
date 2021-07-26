@@ -10,6 +10,7 @@ package com.sg.foundations.variables;
  * @author Steven
  */
 public class BestAdderEver {
+    
     public static void main(String[] args) {
         int a, b, c, sum;
 
