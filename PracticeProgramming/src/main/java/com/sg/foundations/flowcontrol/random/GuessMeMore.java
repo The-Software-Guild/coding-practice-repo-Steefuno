@@ -24,7 +24,7 @@ public class GuessMeMore {
         System.out.println("I've chosen a number between -100 and 100. Bet you can't guess it!");
         do {
             System.out.println("\nYour guess: ");
-            guess = reader.nextInt();
+            guess = Integer.parseInt(reader.nextLine());
             
             if (guess < target) {
                 System.out.println("Too low");
