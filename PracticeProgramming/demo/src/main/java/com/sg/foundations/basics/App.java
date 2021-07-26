@@ -1,9 +1,5 @@
-package com.example;
+package com.com.sg.foundations.basics;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
