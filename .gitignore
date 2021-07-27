@@ -1,3 +1,2 @@
 .vscode
-/HelloWorld/target/
-/PracticeProgramming/target/
+*\target
