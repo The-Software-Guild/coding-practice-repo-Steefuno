@@ -1,11 +1,13 @@
 package com.sg.booktracker.ui;
 
 import java.util.Scanner;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author kylerudy
  */
+@Component
 public class UserIOConsoleImpl implements UserIO {
 
     Scanner sc = new Scanner(System.in);

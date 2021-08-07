@@ -3,11 +3,13 @@ package com.sg.booktracker.dao;
 import com.sg.booktracker.dto.Book;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Kyle David Rudy
  */
+@Component
 public class BookDaoMemoryImpl implements BookDao {
     
     private List<Book> books = new ArrayList<>();
