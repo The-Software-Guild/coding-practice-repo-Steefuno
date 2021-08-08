@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+    "
+>
+    <bean id="controller" class="com.mthree.vendingmachine.controller.Controller">
+        <constructor-arg ref="view"/>
+        <constructor-arg ref="manager"/>
+    </bean>
+    
+    <bean id="view" class="com.mthree.vendingmachine.ui.View">
+        <constructor-arg ref="ui"/>
+    </bean>
+    
+    <bean id="ui" class="com.mthree.vendingmachine.ui.UIConsoleImplementation"/>
+    
+    <bean id="manager" class="com.mthree.vendingmachine.dao.ManagerService">
+        <constructor-arg ref="balanceDao"/>
+        <constructor-arg ref="inventoryDao"/>
+        <constructor-arg ref="auditDao"/>
+    </bean>
+    
+    <bean id="balanceDao" class="com.mthree.vendingmachine.dao.BalanceDaoImplementation"/>
+
+    <bean id="inventoryDao" class="com.mthree.vendingmachine.dao.InventoryDaoFileImplementation">
+        <constructor-arg name="path" value="./Inventory"/>
+    </bean>
+    
+    <bean id="auditDao" class="com.mthree.vendingmachine.dao.AuditDaoFileImplementation">
+        <constructor-arg name="path" value="./AuditLog"/>
+    </bean>
+</beans>
